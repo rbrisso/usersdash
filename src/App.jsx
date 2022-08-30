@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react';
-import Navbar from "./components/Navbar"
+import { Route, Routes } from 'react-router-dom';
+
+import Dashboard from './pages/Dashboard'
+import Maps from './pages/Maps'
+import Nationatily from './pages/Nationatily';
+import Sidebar from './components/Sidebar';
+import Age from './pages/Age';
+import Credits from './pages/Credits';
 
 function App() {
 
@@ -26,11 +33,19 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div >
-        <Navbar theme={theme} handleThemeSwitch={handleThemeSwitch} />
-      </div>
-    </div>
+    <>
+        <Sidebar theme={theme} handleThemeSwitch={handleThemeSwitch}/>
+        <div className='md:ml-64'>
+          <Routes>
+            <Route path='/dashboard' element={<Dashboard />}/>
+            <Route path='/age' element={<Age />}/>
+            <Route path='/maps' element={<Maps />}/>
+            <Route path='/nationality' element={<Nationatily />}/>
+            <Route path='/credits' element={<Credits />}/>
+            <Route path='/*' element={<Dashboard />}/>
+          </Routes>
+        </div>
+    </>
   )
 }
 
