@@ -1,0 +1,23 @@
+export const Countries = {
+    'AU' : 'Australia',
+    'BR' : 'Brazil',
+    'CA' : 'Canada',
+    'CH' : 'Switzerland',
+    'DE' : 'Deutschland',
+    'DK' : 'Denmark',
+    'ES' : 'Spain',
+    'FI' : 'Finland',
+    'FR' : 'France',
+    'GB' : 'Great Britain',
+    'IE' : 'Ireland',
+    'IN' : 'India',
+    'IR' : 'Iran',
+    'MX' : 'Mexico',
+    'NL' : 'Nederland',
+    'NO' : 'Norway',
+    'NZ' : 'New Zeland',
+    'RS' : 'Serbia',
+    'TR' : 'Türkiye',
+    'UA' : 'Ukraine',
+    'US' : 'United States'
+}

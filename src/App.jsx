@@ -1,5 +1,13 @@
 import { useEffect, useState } from 'react';
-import Navbar from "./components/Navbar"
+import { Route, Routes } from 'react-router-dom';
+
+import Dashboard from './pages/Dashboard'
+import Men from './pages/Men'
+import Nationatily from './pages/Nationatily';
+import Sidebar from './components/Sidebar';
+import Women from './pages/Women';
+import Credits from './pages/Credits';
+import Error from './pages/Error';
 
 function App() {
 
@@ -26,11 +34,20 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div >
-        <Navbar theme={theme} handleThemeSwitch={handleThemeSwitch} />
+    <>
+      <Sidebar theme={theme} handleThemeSwitch={handleThemeSwitch}/>
+      <div className='md:ml-64'>
+        <Routes>
+          <Route path='/dashboard' element={<Dashboard />}/>
+          <Route path='/women' element={<Women />}/>
+          <Route path='/men' element={<Men />}/>
+          <Route path='/nationality' element={<Nationatily />}/>
+          <Route path='/credits' element={<Credits />}/>
+          <Route path='/error' element={<Error />}/>
+          <Route path='/*' element={<Dashboard />}/>
+        </Routes>
       </div>
-    </div>
+    </>
   )
 }
 
