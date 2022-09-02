@@ -1,10 +1,9 @@
 import React from 'react'
 import { CgClose, CgMenu } from 'react-icons/cg'
 
-
 const Navbar = (props) => {
   return (
-    <nav className='md:ml-64 bg-gray-500 dark:bg-gray-900 px-3 py-4 '>
+    <nav className='md:ml-64 bg-[#2D93B8] dark:bg-[#333836] px-3 py-4 '>
         <div className='container max-w-full mx-auto flex items-center justify-between'>
             <div className='md:hidden left-2 top-2 '>
                 <button 
@@ -25,8 +24,8 @@ const Navbar = (props) => {
                 </button>
             </div>
             <div className='hidden md:flex'>
-                <h4 className='uppercase text-white'>
-                    Dashboard
+                <h4 className=' dark:text-[#d5d9d7] text-white'>
+                    Hi, welcome back!
                 </h4>
             </div>
             <div className='hover:bg-gray-300 rounded text-white outline-none'>

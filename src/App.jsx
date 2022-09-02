@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Dashboard from './pages/Dashboard'
-import Maps from './pages/Maps'
+import Men from './pages/Men'
 import Nationatily from './pages/Nationatily';
 import Sidebar from './components/Sidebar';
-import Age from './pages/Age';
+import Women from './pages/Women';
 import Credits from './pages/Credits';
+import Error from './pages/Error';
 
 function App() {
 
@@ -34,17 +35,18 @@ function App() {
 
   return (
     <>
-        <Sidebar theme={theme} handleThemeSwitch={handleThemeSwitch}/>
-        <div className='md:ml-64'>
-          <Routes>
-            <Route path='/dashboard' element={<Dashboard />}/>
-            <Route path='/age' element={<Age />}/>
-            <Route path='/maps' element={<Maps />}/>
-            <Route path='/nationality' element={<Nationatily />}/>
-            <Route path='/credits' element={<Credits />}/>
-            <Route path='/*' element={<Dashboard />}/>
-          </Routes>
-        </div>
+      <Sidebar theme={theme} handleThemeSwitch={handleThemeSwitch}/>
+      <div className='md:ml-64'>
+        <Routes>
+          <Route path='/dashboard' element={<Dashboard />}/>
+          <Route path='/women' element={<Women />}/>
+          <Route path='/men' element={<Men />}/>
+          <Route path='/nationality' element={<Nationatily />}/>
+          <Route path='/credits' element={<Credits />}/>
+          <Route path='/error' element={<Error />}/>
+          <Route path='/*' element={<Dashboard />}/>
+        </Routes>
+      </div>
     </>
   )
 }
