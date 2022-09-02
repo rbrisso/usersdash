@@ -4,7 +4,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        inter: ['inter', 'serif']
+      }
+    },
   },
   plugins: [],
 }
